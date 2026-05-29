@@ -1,0 +1,14 @@
+[gd_scene format=3 uid="uid://c8wa5spycjy7b"]
+
+[ext_resource type="Script" uid="uid://vst26i3df163" path="res://scenes/dynamic_trigger.gd" id="1_83qr3"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_1k2v8"]
+size = Vector3(1.9, 2.1000001, 9)
+
+[node name="DynamicTrigger" type="Area3D" unique_id=111912643]
+collision_mask = 2
+script = ExtResource("1_83qr3")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1455016987]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -4)
+shape = SubResource("BoxShape3D_1k2v8")

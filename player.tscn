@@ -1,0 +1,47 @@
+[gd_scene format=3 uid="uid://dgaexk2mqn6j8"]
+
+[ext_resource type="Script" uid="uid://dmc63vggp6v66" path="res://assets/player.gd" id="1_4s81h"]
+[ext_resource type="PackedScene" uid="uid://ccf670c6bkob8" path="res://assets/character-male-e.glb" id="1_jt3wm"]
+[ext_resource type="Script" uid="uid://btqdfm8dd1hc" path="res://scenes/camera_pivot.gd" id="2_i3pqv"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_71pwh"]
+radius = 0.274773
+height = 0.721095
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_i3pqv"]
+radius = 0.3
+
+[node name="Player" type="CharacterBody3D" unique_id=1103375191]
+physics_interpolation_mode = 1
+collision_layer = 2
+script = ExtResource("1_4s81h")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1824387533]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.358072, 0)
+shape = SubResource("CapsuleShape3D_71pwh")
+
+[node name="camera_pivot" type="Node3D" parent="." unique_id=955412006]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 0)
+script = ExtResource("2_i3pqv")
+
+[node name="Camera3D" type="Camera3D" parent="camera_pivot" unique_id=1667418403]
+unique_name_in_owner = true
+transform = Transform3D(1, 0, 0, 0, 0.9563047, 0.29237166, 0, -0.29237166, 0.9563047, 0, 0.20000023, 1.1)
+v_offset = 1.0
+current = true
+
+[node name="ShapeCast3D" type="ShapeCast3D" parent="camera_pivot" unique_id=543705748]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.3, -0.1)
+shape = SubResource("SphereShape3D_i3pqv")
+target_position = Vector3(0, 0, 2)
+
+[node name="playermodel" type="Node3D" parent="." unique_id=1588775264]
+
+[node name="character-male-e2" parent="playermodel" unique_id=1160078136 instance=ExtResource("1_jt3wm")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0.0071882, 0)
+
+[node name="Skeleton3D" parent="playermodel/character-male-e2/character-male-e" parent_id_path=PackedInt32Array(1160078136, 1924280764) index="0" unique_id=422021774]
+bones/4/rotation = Quaternion(0, 0, -0.382683, 0.92388)
+bones/5/rotation = Quaternion(0, 0, 0.382683, 0.92388)
+
+[editable path="playermodel/character-male-e2"]

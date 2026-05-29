@@ -1,0 +1,30 @@
+# Godot 4+ specific ignores
+.godot/
+/android/
+/ios/
+
+# Godot-specific ignores from older versions (safe to keep)
+.import/
+
+# Imported translations (automatically generated from CSV files)
+*.translation
+
+# Mono-specific ignores (only if you ever use C#)
+.mono/
+data_*/
+mono_crash.*.json
+
+# System / editor noise
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+*~
+.vscode/
+.idea/
+
+# Build artifacts (if you ever export builds into the repo folder)
+/build/
+/builds/
+/export/
+/exports/

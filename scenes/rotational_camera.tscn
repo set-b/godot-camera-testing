@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://kkm7gdb0n8hg"]
+
+[ext_resource type="Script" uid="uid://ctb2k7ixl2poq" path="res://scenes/rotational_camera.gd" id="1_1n7s3"]
+
+[node name="RotationalCamera" type="Camera3D" unique_id=330208]
+transform = Transform3D(1, 0, 0, 0, 0.90630776, 0.4226183, 0, -0.4226183, 0.90630776, 0, 0, 0)
+current = true
+script = ExtResource("1_1n7s3")

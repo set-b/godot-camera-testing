@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://deca4y36k5uyn"]
+
+[ext_resource type="PackedScene" uid="uid://ckogt2esus2i3" path="res://assets/dungeon-pieces/Floor_Standard.fbx" id="1_errlg"]
+[ext_resource type="PackedScene" uid="uid://dgaexk2mqn6j8" path="res://player.tscn" id="2_bl13t"]
+
+[node name="Test" type="Node3D" unique_id=113865904]
+
+[node name="Floor_Standard" parent="." unique_id=958812828 instance=ExtResource("1_errlg")]
+
+[node name="Player" parent="." unique_id=1972828326 instance=ExtResource("2_bl13t")]
