@@ -12,4 +12,5 @@ func _process(delta: float) -> void:
 
 # rotate along x and y axis to keep player in view
 func _physics_process(delta: float) -> void:
-	self.look_at(player.global_position)
+	#self.look_at(player.global_position)
+	pass

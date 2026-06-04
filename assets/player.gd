@@ -5,11 +5,12 @@ extends CharacterBody3D
 @export var jump_velocity := 4.5
 const ROTATION_SPEED := 6.0
 
+
 #slowly rotate the charcter to point in the direction of the camera_pivot
 #@onready var camera_pivot : Node3D = $camera_pivot
 @onready var playermodel : Node3D = $playermodel
 @onready var room_camera : Camera3D = get_viewport().get_camera_3d()
-@onready var camera_pivot: Node3D = $camera_pivot
+@onready var camera_pivot: Node3D = $"../camera_pivot"
 
 enum animation_state {IDLE,RUNNING,JUMPING}
 var player_animation_state : animation_state = animation_state.IDLE

@@ -1,0 +1,96 @@
+[gd_scene format=3 uid="uid://b5myflvbvca3w"]
+
+[ext_resource type="PackedScene" uid="uid://clc5wyxydsaka" path="res://player_lag.tscn" id="1_jr57x"]
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_ipv6y"]
+top_radius = 0.0
+height = 30.0
+radial_segments = 4
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_jr57x"]
+data = PackedVector3Array(0, 15, 0, 0, 15, 0, 0, 9, 0.099999994, 0, 15, 0, 0.099999994, 9, 0, 0, 9, 0.099999994, 0, 15, 0, 0, 15, 0, 0.099999994, 9, 0, 0, 15, 0, 0, 9, -0.099999994, 0.099999994, 9, 0, 0, 15, 0, 0, 15, 0, 0, 9, -0.099999994, 0, 15, 0, -0.099999994, 9, 0, 0, 9, -0.099999994, 0, 15, 0, 0, 15, 0, -0.099999994, 9, 0, 0, 15, 0, 0, 9, 0.099999994, -0.099999994, 9, 0, 0, 9, 0.099999994, 0.099999994, 9, 0, 0, 3, 0.19999999, 0.099999994, 9, 0, 0.19999999, 3, 0, 0, 3, 0.19999999, 0.099999994, 9, 0, 0, 9, -0.099999994, 0.19999999, 3, 0, 0, 9, -0.099999994, 0, 3, -0.19999999, 0.19999999, 3, 0, 0, 9, -0.099999994, -0.099999994, 9, 0, 0, 3, -0.19999999, -0.099999994, 9, 0, -0.19999999, 3, 0, 0, 3, -0.19999999, -0.099999994, 9, 0, 0, 9, 0.099999994, -0.19999999, 3, 0, 0, 9, 0.099999994, 0, 3, 0.19999999, -0.19999999, 3, 0, 0, 3, 0.19999999, 0.19999999, 3, 0, 0, -3, 0.29999998, 0.19999999, 3, 0, 0.29999998, -3, 0, 0, -3, 0.29999998, 0.19999999, 3, 0, 0, 3, -0.19999999, 0.29999998, -3, 0, 0, 3, -0.19999999, 0, -3, -0.29999998, 0.29999998, -3, 0, 0, 3, -0.19999999, -0.19999999, 3, 0, 0, -3, -0.29999998, -0.19999999, 3, 0, -0.29999998, -3, 0, 0, -3, -0.29999998, -0.19999999, 3, 0, 0, 3, 0.19999999, -0.29999998, -3, 0, 0, 3, 0.19999999, 0, -3, 0.29999998, -0.29999998, -3, 0, 0, -3, 0.29999998, 0.29999998, -3, 0, 0, -9, 0.39999998, 0.29999998, -3, 0, 0.39999998, -9, 0, 0, -9, 0.39999998, 0.29999998, -3, 0, 0, -3, -0.29999998, 0.39999998, -9, 0, 0, -3, -0.29999998, 0, -9, -0.39999998, 0.39999998, -9, 0, 0, -3, -0.29999998, -0.29999998, -3, 0, 0, -9, -0.39999998, -0.29999998, -3, 0, -0.39999998, -9, 0, 0, -9, -0.39999998, -0.29999998, -3, 0, 0, -3, 0.29999998, -0.39999998, -9, 0, 0, -3, 0.29999998, 0, -9, 0.39999998, -0.39999998, -9, 0, 0, -9, 0.39999998, 0.39999998, -9, 0, 0, -15, 0.5, 0.39999998, -9, 0, 0.5, -15, 0, 0, -15, 0.5, 0.39999998, -9, 0, 0, -9, -0.39999998, 0.5, -15, 0, 0, -9, -0.39999998, 0, -15, -0.5, 0.5, -15, 0, 0, -9, -0.39999998, -0.39999998, -9, 0, 0, -15, -0.5, -0.39999998, -9, 0, -0.5, -15, 0, 0, -15, -0.5, -0.39999998, -9, 0, 0, -9, 0.39999998, -0.5, -15, 0, 0, -9, 0.39999998, 0, -15, 0.5, -0.5, -15, 0, 0, -15, 0, 0, -15, 0.5, 0.5, -15, 0, 0, -15, 0, 0.5, -15, 0, 0, -15, -0.5, 0, -15, 0, 0, -15, -0.5, -0.5, -15, 0, 0, -15, 0, -0.5, -15, 0, 0, -15, 0.5)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ipv6y"]
+
+[sub_resource type="Sky" id="Sky_jr57x"]
+
+[sub_resource type="Environment" id="Environment_jr57x"]
+sky = SubResource("Sky_jr57x")
+ambient_light_source = 2
+ambient_light_color = Color(0.44692105, 0.6230228, 1, 1)
+ambient_light_energy = 0.9
+
+[node name="HubAndSpokeTest" type="Node3D" unique_id=859213]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=734037427]
+transform = Transform3D(39.592796, 0, 0, 0, 1, 0, 0, 0, 38.640003, 0, 15, 0)
+mesh = SubResource("CylinderMesh_ipv6y")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="MeshInstance3D" unique_id=1178952528]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="MeshInstance3D/StaticBody3D" unique_id=1774604465]
+shape = SubResource("ConcavePolygonShape3D_jr57x")
+
+[node name="Player" parent="." unique_id=2030695621 instance=ExtResource("1_jr57x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 0, 20)
+
+[node name="Floor" type="CSGBox3D" parent="." unique_id=2096587899]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -3.1000004, -0.5)
+use_collision = true
+size = Vector3(75, 6, 127)
+material = SubResource("StandardMaterial3D_ipv6y")
+
+[node name="Pool" type="CSGBox3D" parent="Floor" unique_id=103045653]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 15.950001, 3.5, 24.4)
+operation = 2
+size = Vector3(15.400001, 3, 15.900001)
+
+[node name="Town" type="Node3D" parent="." unique_id=1986614354]
+
+[node name="CSGBox3D" type="CSGBox3D" parent="Town" unique_id=1113446984]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -22, 0.8, 7.8)
+use_collision = true
+size = Vector3(2, 2, 2.6000001)
+
+[node name="CSGBox3D2" type="CSGBox3D" parent="Town" unique_id=625733616]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10, 0.8, 14.8)
+use_collision = true
+size = Vector3(2, 2, 2.6000001)
+
+[node name="CSGBox3D3" type="CSGBox3D" parent="Town" unique_id=20438473]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -22, 0.8, 14.8)
+use_collision = true
+size = Vector3(2, 2, 2.6000001)
+
+[node name="CSGBox3D4" type="CSGBox3D" parent="Town" unique_id=2008733341]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10, 0.8, 19.8)
+use_collision = true
+size = Vector3(2, 2, 2.6000001)
+
+[node name="CSGBox3D5" type="CSGBox3D" parent="Town" unique_id=1097171181]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -22, 0.8, 19.8)
+use_collision = true
+size = Vector3(2, 2, 2.6000001)
+
+[node name="CSGBox3D6" type="CSGBox3D" parent="Town" unique_id=1870645889]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10, 0.8, 25.8)
+use_collision = true
+size = Vector3(2, 2, 2.6000001)
+
+[node name="CSGBox3D7" type="CSGBox3D" parent="Town" unique_id=736291520]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -22, 0.8999999, 25.8)
+use_collision = true
+size = Vector3(2, 2, 2.6000001)
+
+[node name="CSGBox3D8" type="CSGBox3D" parent="Town" unique_id=1150219128]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -16, 1.3999999, 29.3)
+use_collision = true
+size = Vector3(3, 3, 6)
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=465606486]
+environment = SubResource("Environment_jr57x")
+
+[node name="OmniLight3D" type="OmniLight3D" parent="." unique_id=1439139179]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 15.208191, 28.087234)
+light_energy = 16.0
+omni_range = 79.0
