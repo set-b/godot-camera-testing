@@ -1,0 +1,21 @@
+[gd_scene format=3 uid="uid://dj6xmyqsieseh"]
+
+[ext_resource type="PackedScene" uid="uid://b6urj3cqyvncu" path="res://assets/dungeon-pieces/Torch.fbx" id="1_vafcu"]
+[ext_resource type="Script" uid="uid://nqokhkqmf42" path="res://torch.gd" id="2_ex60v"]
+[ext_resource type="AudioStream" uid="uid://cdhs1uai1nlqn" path="res://scenes/mixkit-gear-metallic-lock-sound-2858.wav" id="3_ex60v"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_vafcu"]
+size = Vector3(1, 2.5895996, 0.7486572)
+
+[node name="Torch" unique_id=2074761379 instance=ExtResource("1_vafcu")]
+script = ExtResource("2_ex60v")
+
+[node name="Area3D" type="Area3D" parent="." index="1" unique_id=1364170555]
+collision_mask = 2
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D" index="0" unique_id=1425346385]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.38146973, -0.066589355)
+shape = SubResource("BoxShape3D_vafcu")
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="." index="2" unique_id=896595356]
+stream = ExtResource("3_ex60v")

@@ -1,5 +1,6 @@
 [gd_scene format=3 uid="uid://clc5wyxydsaka"]
 
+[ext_resource type="Script" uid="uid://bmso8vb5uhgh1" path="res://player_lag.gd" id="1_1mpuc"]
 [ext_resource type="Script" uid="uid://btqdfm8dd1hc" path="res://scenes/camera_pivot.gd" id="1_tilo8"]
 [ext_resource type="Script" uid="uid://dmc63vggp6v66" path="res://assets/player.gd" id="2_1mpuc"]
 [ext_resource type="PackedScene" uid="uid://ccf670c6bkob8" path="res://assets/character-male-e.glb" id="3_5pcaf"]
@@ -12,6 +13,7 @@ radius = 0.274773
 height = 0.721095
 
 [node name="Node3D" type="Node3D" unique_id=2030695621]
+script = ExtResource("1_1mpuc")
 
 [node name="camera_pivot" type="Node3D" parent="." unique_id=955412006]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 0)

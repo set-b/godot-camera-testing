@@ -2,7 +2,6 @@
 
 [ext_resource type="PackedScene" uid="uid://ckogt2esus2i3" path="res://assets/dungeon-pieces/Floor_Standard.fbx" id="1_u7i40"]
 [ext_resource type="PackedScene" uid="uid://d0dv77xuel6m4" path="res://assets/dungeon-pieces/Wall.fbx" id="2_3w3tr"]
-[ext_resource type="PackedScene" uid="uid://dgaexk2mqn6j8" path="res://player.tscn" id="4_1k2v8"]
 [ext_resource type="PackedScene" uid="uid://eynq1cbte0nq" path="res://assets/dungeon-pieces/Arch_Round_RoundColumn.fbx" id="4_3w3tr"]
 [ext_resource type="PackedScene" uid="uid://kkm7gdb0n8hg" path="res://scenes/rotational_camera.tscn" id="5_1k2v8"]
 [ext_resource type="PackedScene" uid="uid://c8wa5spycjy7b" path="res://scenes/dynamic_trigger.tscn" id="6_txc3n"]
@@ -73,8 +72,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.021488212, 4.7683716e-07, 
 [node name="Arch_Round_RoundColumn2" parent="." unique_id=1730453441 instance=ExtResource("4_3w3tr")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.021488212, 4.7683716e-07, -9.139219)
 
-[node name="Player" parent="." unique_id=1103375191 instance=ExtResource("4_1k2v8")]
-
 [node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=1518388370]
 environment = SubResource("Environment_3w3tr")
 
@@ -92,6 +89,7 @@ transform = Transform3D(1, 0, 0, 0, 0.9063078, 0.4226183, 0, -0.4226183, 0.90630
 
 [node name="RotationalCamera" parent="." unique_id=330208 instance=ExtResource("5_1k2v8")]
 transform = Transform3D(1, 0, 0, 0, 0.90630776, 0.4226183, 0, -0.4226183, 0.90630776, 0, 2, 2.2)
+current = false
 
 [node name="DynamicTrigger" parent="." unique_id=111912643 instance=ExtResource("6_txc3n")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.1, -5.2)

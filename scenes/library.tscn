@@ -1,18 +1,18 @@
 [gd_scene format=3 uid="uid://feqpct174t3q"]
 
 [ext_resource type="PackedScene" uid="uid://l2qagot0x8sx" path="res://assets/dungeon-pieces/Bookcase_Full.fbx" id="1_m4m2s"]
+[ext_resource type="Script" uid="uid://4rywnr8j5owd" path="res://scenes/bookcase_wall.gd" id="3_dr2oc"]
 [ext_resource type="PackedScene" uid="uid://ckogt2esus2i3" path="res://assets/dungeon-pieces/Floor_Standard.fbx" id="3_n61aj"]
 [ext_resource type="PackedScene" uid="uid://d0dv77xuel6m4" path="res://assets/dungeon-pieces/Wall.fbx" id="4_igipr"]
-[ext_resource type="PackedScene" uid="uid://kkm7gdb0n8hg" path="res://scenes/rotational_camera.tscn" id="5_6frsu"]
 [ext_resource type="PackedScene" uid="uid://clc5wyxydsaka" path="res://player_lag.tscn" id="5_dr2oc"]
+[ext_resource type="PackedScene" uid="uid://fglehjoo40es" path="res://scenes/hallway.tscn" id="8_h01uo"]
+[ext_resource type="PackedScene" uid="uid://b6urj3cqyvncu" path="res://assets/dungeon-pieces/Torch.fbx" id="9_q3d3p"]
+[ext_resource type="PackedScene" uid="uid://dj6xmyqsieseh" path="res://scenes/torch._switch.tscn" id="10_7bqx5"]
 
 [sub_resource type="Environment" id="Environment_igipr"]
 background_mode = 1
 ambient_light_color = Color(0.09803922, 0.9764706, 0.9764706, 1)
 ambient_light_energy = 1.33
-
-[sub_resource type="BoxShape3D" id="BoxShape3D_qyo4v"]
-size = Vector3(16, 4, 8)
 
 [node name="Library" type="Node3D" unique_id=1249482764]
 
@@ -274,7 +274,8 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 0, 4)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 0, 6)
 
 [node name="BookcaseWall" type="Node3D" parent="." unique_id=41185605]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.90000004)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 1)
+script = ExtResource("3_dr2oc")
 
 [node name="Bookcase_Full" parent="BookcaseWall" unique_id=233951299 instance=ExtResource("1_m4m2s")]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 7, 0, 1)
@@ -381,26 +382,23 @@ light_energy = 3.905
 omni_range = 15.874
 omni_attenuation = -0.111
 
-[node name="Camera3D" type="Camera3D" parent="." unique_id=189508757]
-transform = Transform3D(0.95576954, 0.119413346, -0.26878434, 0, 0.91387004, 0.4060068, 0.29411662, -0.38804892, 0.87344915, -1.1829777, 3.4393015, 7.250475)
-
-[node name="RotationalCamera" parent="." unique_id=330208 instance=ExtResource("5_6frsu")]
-transform = Transform3D(0.95576954, 0.11941335, -0.26878437, 0, 0.91387004, 0.4060068, 0.29411662, -0.38804895, 0.87344915, -1.1829777, 3.4393015, 7.250475)
-current = false
-
-[node name="DynamicFixed1" type="Camera3D" parent="." unique_id=1610095731]
-transform = Transform3D(-0.3518921, 0.6756442, -0.6478248, 0, 0.6920905, 0.7218108, 0.9360407, 0.25399956, -0.24354123, -5.9878, 6.171073, -6.420763)
-
-[node name="DynamicFixed2" type="Camera3D" parent="." unique_id=360100583]
-transform = Transform3D(0.9905165, -0.06963815, 0.118438564, 0, 0.8620347, 0.50684935, -0.1373942, -0.50204253, 0.85385954, 1.7693467, 4.986434, 8.063241)
-
-[node name="DynamicTrigger" type="Area3D" parent="." unique_id=776343308]
-collision_mask = 2
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="DynamicTrigger" unique_id=25406651]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 3.5)
-shape = SubResource("BoxShape3D_qyo4v")
-debug_color = Color(1, 0.9065935, 0.6507462, 0.41960785)
-
 [node name="PlayerLag" parent="." unique_id=2030695621 instance=ExtResource("5_dr2oc")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -7)
+
+[node name="Hallway" parent="." unique_id=898576946 instance=ExtResource("8_h01uo")]
+transform = Transform3D(0.012443893, 0, 0.9999226, 0, 1, 0, -0.9999226, 0, 0.012443893, 17.029148, 0.009358406, -1.2181401)
+
+[node name="Torch" parent="." unique_id=2074761379 instance=ExtResource("9_q3d3p")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 6.5, 1, -6.9000006)
+
+[node name="Torch2" parent="." unique_id=1724823060 instance=ExtResource("9_q3d3p")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -6.8, 1, -6.9000006)
+
+[node name="Torch3" parent="." unique_id=152344168 instance=ExtResource("9_q3d3p")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -6.8, 1, 5.0999994)
+
+[node name="TorchSwitch" parent="." unique_id=707673996 instance=ExtResource("10_7bqx5")]
+transform = Transform3D(4.3711395e-08, 1, -8.742278e-08, 1, -4.371139e-08, 8.940697e-08, 8.940696e-08, -8.7422784e-08, -1, 1.9, 1, 6.8)
+
+[node name="BookcaseCamera" type="Camera3D" parent="." unique_id=388215991]
+transform = Transform3D(0.72109216, 0.2785342, -0.63438535, 0, 0.91563153, 0.40201858, 0.69283915, -0.28989244, 0.6602547, 5.058153, 2.383894, 3.1553898)
