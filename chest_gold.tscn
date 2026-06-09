@@ -1,0 +1,92 @@
+[gd_scene format=3 uid="uid://cakrsvublrm00"]
+
+[ext_resource type="PackedScene" uid="uid://s3qu0q6dv78b" path="res://assets/dungeon-pieces/Chest_Gold.fbx" id="1_1qtgt"]
+[ext_resource type="Script" uid="uid://cd2543jvvvmpu" path="res://chest_gold.gd" id="2_qty6p"]
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_qty6p"]
+radius = 1.1
+
+[sub_resource type="Animation" id="Animation_qty6p"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Chest_Gold_Top:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 0.5370769, -0.35151616)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Chest_Gold_Top:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(-1.5707964, 0, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_enicq"]
+resource_name = "open"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Chest_Gold_Top:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.55, 0.9),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector3(0, 0.5370769, -0.35151616), Vector3(1, 0.5370769, -0.35151616), Vector3(1, 0.3370769, -0.35151616)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Chest_Gold_Top:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.9),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(-1.5707964, 0, 0), Vector3(-1.0466042, 1.5184722, -1.5254874)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_lgihh"]
+_data = {
+&"RESET": SubResource("Animation_qty6p"),
+&"open": SubResource("Animation_enicq")
+}
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_qty6p"]
+size = Vector3(1.1, 1, 1)
+
+[node name="Chest_Gold" unique_id=425445186 instance=ExtResource("1_1qtgt")]
+script = ExtResource("2_qty6p")
+
+[node name="Chest_Gold_Top" parent="." index="1" unique_id=732470429]
+transform = Transform3D(100.00003, 0, 0, 0, -4.3711393e-06, 100.00003, 0, -100.000015, -4.37114e-06, 0, 0.5370769, -0.35151616)
+
+[node name="Area3D" type="Area3D" parent="." index="2" unique_id=1213706296]
+collision_mask = 2
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D" index="0" unique_id=352521327]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.6, 0)
+shape = SubResource("SphereShape3D_qty6p")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." index="3" unique_id=1694284003]
+libraries/ = SubResource("AnimationLibrary_lgihh")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="." index="4" unique_id=427637889]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" index="0" unique_id=1491608195]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 0)
+shape = SubResource("BoxShape3D_qty6p")

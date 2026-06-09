@@ -4,7 +4,6 @@
 [ext_resource type="PackedScene" uid="uid://cuw3is5qu6ogh" path="res://assets/dungeon-pieces/Stairs_2.fbx" id="2_4adt7"]
 [ext_resource type="PackedScene" uid="uid://ckogt2esus2i3" path="res://assets/dungeon-pieces/Floor_Standard.fbx" id="3_aiepx"]
 [ext_resource type="PackedScene" uid="uid://d0dv77xuel6m4" path="res://assets/dungeon-pieces/Wall.fbx" id="4_6m6ee"]
-[ext_resource type="PackedScene" uid="uid://dgaexk2mqn6j8" path="res://player.tscn" id="5_4adt7"]
 [ext_resource type="PackedScene" uid="uid://kkm7gdb0n8hg" path="res://scenes/rotational_camera.tscn" id="6_aiepx"]
 
 [sub_resource type="Environment" id="Environment_4adt7"]
@@ -162,9 +161,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14, 2.8, 3.2)
 
 [node name="Wall9" parent="NorthWallPlatform" unique_id=1557294035 instance=ExtResource("4_6m6ee")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16, 2.8, 3.2)
-
-[node name="Player" parent="." unique_id=1103375191 instance=ExtResource("5_4adt7")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0, 0)
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=300731984]
 environment = SubResource("Environment_4adt7")

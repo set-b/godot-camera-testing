@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://brasseuwbfoi3"]
+
+[ext_resource type="Script" uid="uid://h5eq1p8uaq14" path="res://collectible.gd" id="1_8orai"]
+[ext_resource type="PackedScene" uid="uid://s3qu0q6dv78b" path="res://assets/dungeon-pieces/Chest_Gold.fbx" id="1_rd2yi"]
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_d4byk"]
+radius = 1.5513189
+
+[node name="Collectible" type="Node3D" unique_id=1888786063]
+script = ExtResource("1_8orai")
+
+[node name="Area3D" type="Area3D" parent="." unique_id=1535277245]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D" unique_id=2096960718]
+shape = SubResource("SphereShape3D_d4byk")
+
+[node name="Chest_Gold" parent="." unique_id=425445186 instance=ExtResource("1_rd2yi")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.36551344, 0, 0.67994)
