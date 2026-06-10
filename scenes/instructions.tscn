@@ -8,7 +8,7 @@ modulate = Color(1, 0.35686275, 0, 1)
 text = "WASD: move
 Left and Right arrow keys: rotate camera
 Down arrow key: snap camera
-Space: jump or interact with objects
+Space: jump/interact
 "
 font_size = 37
 horizontal_alignment = 0
