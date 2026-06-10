@@ -1,0 +1,14 @@
+[gd_scene format=3 uid="uid://fhw8uqwndt7g"]
+
+[ext_resource type="PackedScene" uid="uid://cuw3is5qu6ogh" path="res://assets/dungeon-pieces/Stairs_2.fbx" id="1_034mo"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_og2ja"]
+size = Vector3(2.1000001, 1, 2.6000001)
+
+[node name="Stairs_2" unique_id=1588211799 instance=ExtResource("1_034mo")]
+
+[node name="StaticBody3D" type="StaticBody3D" parent="." index="1" unique_id=576432134]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" index="0" unique_id=1722923178]
+transform = Transform3D(1, 0, 0, 0, 0.9063079, -0.42261827, 0, 0.42261827, 0.9063079, 0, 0.88705903, 0.048296332)
+shape = SubResource("BoxShape3D_og2ja")

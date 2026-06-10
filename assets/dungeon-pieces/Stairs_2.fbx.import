@@ -40,7 +40,6 @@ materials/extract_path=""
 _subresources={
 "nodes": {
 "PATH:Stairs_2": {
-"generate/physics": true,
 "physics/shape_type": 2
 }
 }

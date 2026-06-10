@@ -22,7 +22,7 @@ func move():
 	move_tween.set_ease(Tween.EASE_IN_OUT)
 	# might want to do either multiple tweens or set initial bookcase position farther away
 	# to prevent bookcase from initially clipping with the ground
-	move_tween.tween_property(self, "position", Vector3(0.284,-2.51,0.9), 5.0)
+	move_tween.tween_property(self, "position", Vector3(0.5,-2.54,0.9), 5.0)
 	move_tween.finished.connect(func() -> void:
 		get_tree().paused = false
 		bookcase_camera.clear_current()

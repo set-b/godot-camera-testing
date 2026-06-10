@@ -26,97 +26,103 @@ size = Vector3(8.6, 3, 1)
 [sub_resource type="BoxShape3D" id="BoxShape3D_7bqx5"]
 size = Vector3(1, 1, 1.6)
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_aotgj"]
+size = Vector3(1.1557617, 0.5557373, 2)
+
 [node name="Library" type="Node3D" unique_id=1249482764]
 
 [node name="BookcaseCorner" type="Node3D" parent="." unique_id=574783380]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.2, 0, 0)
 
-[node name="Bookcase_Full7" parent="BookcaseCorner" unique_id=382893401 instance=ExtResource("1_m4m2s")]
+[node name="Bookcase_Full7" parent="BookcaseCorner" unique_id=995047069 instance=ExtResource("1_m4m2s")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, 4)
 
-[node name="Bookcase_Full8" parent="BookcaseCorner" unique_id=1143485112 instance=ExtResource("1_m4m2s")]
+[node name="Bookcase_Full8" parent="BookcaseCorner" unique_id=991415544 instance=ExtResource("1_m4m2s")]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0.6, 0, 5)
 
-[node name="Bookcase_Full9" parent="BookcaseCorner" unique_id=1150222968 instance=ExtResource("1_m4m2s")]
+[node name="Bookcase_Full9" parent="BookcaseCorner" unique_id=650564192 instance=ExtResource("1_m4m2s")]
 transform = Transform3D(1.1924881e-08, 0, -1, 0, 1, 0, 1, 0, 1.1924881e-08, 3.5, 0, 5)
 
 [node name="BookcaseAisles" type="Node3D" parent="." unique_id=405350957]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.2, 0, 0)
 
-[node name="Bookcase_Full2" parent="BookcaseAisles" unique_id=1193255091 instance=ExtResource("1_m4m2s")]
+[node name="Bookcase_Full2" parent="BookcaseAisles" unique_id=717697542 instance=ExtResource("1_m4m2s")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, 1)
 
-[node name="Bookcase_Full4" parent="BookcaseAisles" unique_id=1447012713 instance=ExtResource("1_m4m2s")]
+[node name="Bookcase_Full4" parent="BookcaseAisles" unique_id=1076964835 instance=ExtResource("1_m4m2s")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, -2)
 
-[node name="Bookcase_Full6" parent="BookcaseAisles" unique_id=1792932562 instance=ExtResource("1_m4m2s")]
+[node name="Bookcase_Full6" parent="BookcaseAisles" unique_id=895107397 instance=ExtResource("1_m4m2s")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, -5)
 
-[node name="Bookcase_Full10" parent="BookcaseAisles" unique_id=561801585 instance=ExtResource("1_m4m2s")]
+[node name="Bookcase_Full10" parent="BookcaseAisles" unique_id=449480562 instance=ExtResource("1_m4m2s")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, 1)
 
-[node name="Bookcase_Full11" parent="BookcaseAisles" unique_id=1496280414 instance=ExtResource("1_m4m2s")]
+[node name="Bookcase_Full11" parent="BookcaseAisles" unique_id=1482297035 instance=ExtResource("1_m4m2s")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, -2)
 
-[node name="Bookcase_Full12" parent="BookcaseAisles" unique_id=825825555 instance=ExtResource("1_m4m2s")]
+[node name="Bookcase_Full12" parent="BookcaseAisles" unique_id=461190966 instance=ExtResource("1_m4m2s")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, -5)
 
-[node name="Bookcase_Full3" parent="BookcaseAisles" unique_id=462134 instance=ExtResource("1_m4m2s")]
+[node name="Bookcase_Full3" parent="BookcaseAisles" unique_id=1921491565 instance=ExtResource("1_m4m2s")]
 transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 2, 0, 0.3)
 
-[node name="Bookcase_Full5" parent="BookcaseAisles" unique_id=1709591281 instance=ExtResource("1_m4m2s")]
+[node name="Bookcase_Full5" parent="BookcaseAisles" unique_id=336501037 instance=ExtResource("1_m4m2s")]
 transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 2, 0, -2.7)
 
-[node name="Bookcase_Full13" parent="BookcaseAisles" unique_id=1005012779 instance=ExtResource("1_m4m2s")]
+[node name="Bookcase_Full13" parent="BookcaseAisles" unique_id=1327480583 instance=ExtResource("1_m4m2s")]
 transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 2, 0, -5.7)
 
-[node name="Bookcase_Full14" parent="BookcaseAisles" unique_id=2121872835 instance=ExtResource("1_m4m2s")]
+[node name="Bookcase_Full14" parent="BookcaseAisles" unique_id=1454247830 instance=ExtResource("1_m4m2s")]
 transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 4, 0, 0.3)
 
-[node name="Bookcase_Full15" parent="BookcaseAisles" unique_id=821140227 instance=ExtResource("1_m4m2s")]
+[node name="Bookcase_Full15" parent="BookcaseAisles" unique_id=1653668067 instance=ExtResource("1_m4m2s")]
 transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 4, 0, -2.7)
 
-[node name="Bookcase_Full16" parent="BookcaseAisles" unique_id=1715918668 instance=ExtResource("1_m4m2s")]
+[node name="Bookcase_Full16" parent="BookcaseAisles" unique_id=17977387 instance=ExtResource("1_m4m2s")]
 transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 4, 0, -5.7)
 
 [node name="BookcaseAisles2" type="Node3D" parent="." unique_id=923256770]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6, 0, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.8, 0, 0)
 
-[node name="Bookcase_Full2" parent="BookcaseAisles2" unique_id=113032148 instance=ExtResource("1_m4m2s")]
+[node name="Bookcase_Full2" parent="BookcaseAisles2" unique_id=1171432100 instance=ExtResource("1_m4m2s")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, 1)
 
-[node name="Bookcase_Full4" parent="BookcaseAisles2" unique_id=495904763 instance=ExtResource("1_m4m2s")]
+[node name="Bookcase_Full4" parent="BookcaseAisles2" unique_id=1520030999 instance=ExtResource("1_m4m2s")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, -2)
 
-[node name="Bookcase_Full6" parent="BookcaseAisles2" unique_id=1753192829 instance=ExtResource("1_m4m2s")]
+[node name="Bookcase_Full6" parent="BookcaseAisles2" unique_id=1241614550 instance=ExtResource("1_m4m2s")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, -5)
 
-[node name="Bookcase_Full10" parent="BookcaseAisles2" unique_id=630928214 instance=ExtResource("1_m4m2s")]
+[node name="Bookcase_Full10" parent="BookcaseAisles2" unique_id=268998179 instance=ExtResource("1_m4m2s")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, 1)
 
-[node name="Bookcase_Full11" parent="BookcaseAisles2" unique_id=1332508308 instance=ExtResource("1_m4m2s")]
+[node name="Bookcase_Full11" parent="BookcaseAisles2" unique_id=925039791 instance=ExtResource("1_m4m2s")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, -2)
 
-[node name="Bookcase_Full12" parent="BookcaseAisles2" unique_id=212558131 instance=ExtResource("1_m4m2s")]
+[node name="Bookcase_Full12" parent="BookcaseAisles2" unique_id=1012234585 instance=ExtResource("1_m4m2s")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, -5)
 
-[node name="Bookcase_Full3" parent="BookcaseAisles2" unique_id=565884019 instance=ExtResource("1_m4m2s")]
+[node name="Bookcase_Full3" parent="BookcaseAisles2" unique_id=747757106 instance=ExtResource("1_m4m2s")]
 transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 2, 0, 0.3)
 
-[node name="Bookcase_Full5" parent="BookcaseAisles2" unique_id=1888230479 instance=ExtResource("1_m4m2s")]
+[node name="Bookcase_Full5" parent="BookcaseAisles2" unique_id=54952329 instance=ExtResource("1_m4m2s")]
 transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 2, 0, -2.7)
 
-[node name="Bookcase_Full13" parent="BookcaseAisles2" unique_id=1438086083 instance=ExtResource("1_m4m2s")]
+[node name="Bookcase_Full13" parent="BookcaseAisles2" unique_id=182454086 instance=ExtResource("1_m4m2s")]
 transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 2, 0, -5.7)
 
-[node name="Bookcase_Full14" parent="BookcaseAisles2" unique_id=1338800015 instance=ExtResource("1_m4m2s")]
+[node name="Bookcase_Full14" parent="BookcaseAisles2" unique_id=33350640 instance=ExtResource("1_m4m2s")]
 transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 4, 0, 0.3)
 
-[node name="Bookcase_Full15" parent="BookcaseAisles2" unique_id=56143253 instance=ExtResource("1_m4m2s")]
+[node name="Bookcase_Full15" parent="BookcaseAisles2" unique_id=1259534039 instance=ExtResource("1_m4m2s")]
 transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 4, 0, -2.7)
 
-[node name="Bookcase_Full16" parent="BookcaseAisles2" unique_id=595926478 instance=ExtResource("1_m4m2s")]
+[node name="Bookcase_Full16" parent="BookcaseAisles2" unique_id=966767936 instance=ExtResource("1_m4m2s")]
 transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 4, 0, -5.7)
 
 [node name="Floor" type="Node3D" parent="." unique_id=1746430275]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.2, 0, 0)
 
 [node name="Floor_Standard" parent="Floor" unique_id=958812828 instance=ExtResource("3_n61aj")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 0, 2)
@@ -287,22 +293,23 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 0, 6)
 
 [node name="BookcaseWall" type="Node3D" parent="." unique_id=41185605]
 process_mode = 3
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 1)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.2, 0, 1)
 script = ExtResource("3_dr2oc")
 
-[node name="Bookcase_Full" parent="BookcaseWall" unique_id=233951299 instance=ExtResource("1_m4m2s")]
+[node name="Bookcase_Full" parent="BookcaseWall" unique_id=1823089546 instance=ExtResource("1_m4m2s")]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 7, 0, 1)
 
-[node name="Bookcase_Full2" parent="BookcaseWall" unique_id=1482038054 instance=ExtResource("1_m4m2s")]
+[node name="Bookcase_Full2" parent="BookcaseWall" unique_id=208241481 instance=ExtResource("1_m4m2s")]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 7, 0, -1)
 
-[node name="Bookcase_Full3" parent="BookcaseWall" unique_id=966877325 instance=ExtResource("1_m4m2s")]
+[node name="Bookcase_Full3" parent="BookcaseWall" unique_id=1544000921 instance=ExtResource("1_m4m2s")]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 7, 0, -3)
 
-[node name="Bookcase_Full4" parent="BookcaseWall" unique_id=2010032262 instance=ExtResource("1_m4m2s")]
+[node name="Bookcase_Full4" parent="BookcaseWall" unique_id=1028322030 instance=ExtResource("1_m4m2s")]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 7, 0, -5)
 
 [node name="EastWestWall" type="Node3D" parent="." unique_id=1997891674]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.2, 0, 0)
 
 [node name="Wall" parent="EastWestWall" unique_id=958273060 instance=ExtResource("4_igipr")]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 7, 0, -6.1397424)
@@ -341,7 +348,7 @@ transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -7, 
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -7, 0, 5.860258)
 
 [node name="SouthWall" type="Node3D" parent="." unique_id=1594988308]
-transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -16, 0, 0)
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -15.8, 0, 0)
 
 [node name="Wall11" parent="SouthWall" unique_id=708054933 instance=ExtResource("4_igipr")]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -7, 0, 9.860258)
@@ -365,7 +372,7 @@ transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -7, 
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -7, 0, 21.860258)
 
 [node name="NorthWall" type="Node3D" parent="." unique_id=1757217236]
-transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -16, 0, -16.300001)
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -15.8, 0, -16.300001)
 
 [node name="Wall11" parent="NorthWall" unique_id=1183798753 instance=ExtResource("4_igipr")]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -7, 0, 9.860258)
@@ -389,33 +396,33 @@ transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -7, 
 environment = SubResource("Environment_igipr")
 
 [node name="OmniLight3D" type="OmniLight3D" parent="." unique_id=1556458909]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.2931347, 7.879154, -3.0102305)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.09313469, 7.879154, -3.0102305)
 light_color = Color(1, 0.70980394, 0.29803923, 1)
 light_energy = 3.905
 omni_range = 15.874
 omni_attenuation = -0.111
 
 [node name="PlayerLag" parent="." unique_id=2030695621 instance=ExtResource("5_dr2oc")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -7)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.2, 0, -7)
 
 [node name="Hallway" parent="." unique_id=898576946 instance=ExtResource("8_h01uo")]
 transform = Transform3D(0.012443893, 0, 0.9999226, 0, 1, 0, -0.9999226, 0, 0.012443893, 17.029148, 0.009358406, -1.2181401)
 
 [node name="Torch" parent="." unique_id=2074761379 instance=ExtResource("9_q3d3p")]
-transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 6.5, 1, -6.9000006)
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 6.7, 1, -6.9000006)
 
 [node name="Torch2" parent="." unique_id=1724823060 instance=ExtResource("9_q3d3p")]
-transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -6.8, 1, -6.9000006)
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -6.6000004, 1, -6.9000006)
 
 [node name="Torch3" parent="." unique_id=152344168 instance=ExtResource("9_q3d3p")]
-transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -6.8, 1, 5.0999994)
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -6.6000004, 1, 5.0999994)
 
 [node name="TorchSwitch" parent="." unique_id=707673996 instance=ExtResource("10_7bqx5")]
 process_mode = 3
-transform = Transform3D(4.3711395e-08, 1, -8.742278e-08, 1, -4.371139e-08, 8.940697e-08, 8.940696e-08, -8.7422784e-08, -1, 1.9, 1, 6.8)
+transform = Transform3D(4.3711395e-08, 1, -8.742278e-08, 1, -4.371139e-08, 8.940697e-08, 8.940696e-08, -8.7422784e-08, -1, 2.1, 1, 6.8)
 
 [node name="BookcaseCamera" type="Camera3D" parent="." unique_id=388215991]
-transform = Transform3D(0.72109216, 0.2785342, -0.63438535, 0, 0.91563153, 0.40201858, 0.69283915, -0.28989244, 0.6602547, 5.058153, 2.383894, 3.1553898)
+transform = Transform3D(0.72109216, 0.2785342, -0.63438535, 0, 0.91563153, 0.40201858, 0.69283915, -0.28989244, 0.6602547, 5.258153, 2.383894, 3.1553898)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="." unique_id=599588055]
 
@@ -440,10 +447,10 @@ transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0, 1
 shape = SubResource("BoxShape3D_h01uo")
 
 [node name="PlatformRoom" parent="StaticBody3D3" unique_id=2048777723 instance=ExtResource("9_wyy3a")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 21.4, 0, -1)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 21, 0, -1.2)
 
 [node name="Chest_Gold" parent="." unique_id=425445186 instance=ExtResource("10_q3d3p")]
-transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 29, 2.8, -1)
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 29, 2.7337062, -1.1045961)
 
 [node name="StaticBody3D4" type="StaticBody3D" parent="." unique_id=616659234]
 
@@ -467,3 +474,9 @@ shape = SubResource("BoxShape3D_7bqx5")
 
 [node name="Node3D" parent="." unique_id=517115656 instance=ExtResource("11_7bqx5")]
 transform = Transform3D(1, 0, 0, 0, 0.9748507, -0.2228588, 0, 0.2228588, 0.9748507, -0.0567853, 1.8455224, -8.810457)
+
+[node name="StaticBody3D6" type="StaticBody3D" parent="." unique_id=519634198]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D6" unique_id=1989559759]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.922119, -0.25454187, -1.2)
+shape = SubResource("BoxShape3D_aotgj")
