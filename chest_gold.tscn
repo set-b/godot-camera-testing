@@ -90,3 +90,10 @@ libraries/ = SubResource("AnimationLibrary_lgihh")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" index="0" unique_id=1491608195]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 0)
 shape = SubResource("BoxShape3D_qty6p")
+
+[node name="WinMessage" type="Label3D" parent="." index="5" unique_id=778439468]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 0)
+visible = false
+modulate = Color(1, 0.81960785, 0, 1)
+text = "You Win!"
+font_size = 45

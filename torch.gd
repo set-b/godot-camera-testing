@@ -26,6 +26,7 @@ func _process(delta: float) -> void:
 			audio_stream_player_3d.play(0.0)
 			interactive = false
 			rotation_tween.finished.connect(func() -> void:
+				get_tree().paused = true
 				pressed.emit()
 				# disable collision shape
 				$Area3D/CollisionShape3D.set_deferred("disabled", true)

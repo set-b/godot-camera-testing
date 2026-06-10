@@ -55,6 +55,11 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, -2)
 [node name="Floor_Standard17" parent="Platform" unique_id=1988514692 instance=ExtResource("3_aiepx")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -2)
 
+[node name="Floor_Standard20" parent="Platform" unique_id=589151970 instance=ExtResource("3_aiepx")]
+
+[node name="Floor_Standard21" parent="Platform" unique_id=285302439 instance=ExtResource("3_aiepx")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, 0)
+
 [node name="Floor_Standard18" parent="Platform" unique_id=418230792 instance=ExtResource("3_aiepx")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0, -2)
 
