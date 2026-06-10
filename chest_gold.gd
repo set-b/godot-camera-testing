@@ -13,6 +13,11 @@ func _ready() -> void:
 				openable = true
 	)
 	
+	area_3d.body_exited.connect(func(body: Node) -> void:
+			if body is Player:
+				openable = false
+	)
+	
 func _process(delta: float) -> void:
 	if openable and not used:
 		if Input.is_action_just_pressed("ui_accept"):

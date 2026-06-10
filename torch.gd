@@ -14,6 +14,10 @@ func _ready() -> void:
 		if body is Player:
 			interactive = true
 	)
+	area_3d.body_exited.connect(func(body: Node) -> void:
+		if body is Player:
+			interactive = false
+	) 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
