@@ -472,7 +472,7 @@ shape = SubResource("BoxShape3D_7bqx5")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 18.2, 2.4, -3.3999999)
 shape = SubResource("BoxShape3D_7bqx5")
 
-[node name="Node3D" parent="." unique_id=517115656 instance=ExtResource("11_7bqx5")]
+[node name="Text" parent="." unique_id=517115656 instance=ExtResource("11_7bqx5")]
 transform = Transform3D(1, 0, 0, 0, 0.9748507, -0.2228588, 0, 0.2228588, 0.9748507, -0.0567853, 1.8455224, -8.810457)
 
 [node name="StaticBody3D6" type="StaticBody3D" parent="." unique_id=519634198]
@@ -480,3 +480,10 @@ transform = Transform3D(1, 0, 0, 0, 0.9748507, -0.2228588, 0, 0.2228588, 0.97485
 [node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D6" unique_id=1989559759]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.922119, -0.25454187, -1.2)
 shape = SubResource("BoxShape3D_aotgj")
+
+[node name="CameraInversion" type="Label3D" parent="." unique_id=1743722990]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.3, -8.689413)
+modulate = Color(0, 1, 1, 1)
+text = "Camera Inversion
+"
+font_size = 38

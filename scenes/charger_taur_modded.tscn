@@ -1,0 +1,51 @@
+[gd_scene format=3 uid="uid://bne8e88gtjdms"]
+
+[ext_resource type="PackedScene" uid="uid://ckbcuewasoodh" path="res://assets/Boss/ChargerTaur.glb" id="1_bfl0g"]
+[ext_resource type="Script" uid="uid://cm0c5hql5u3e0" path="res://charger_taur.gd" id="2_nbebp"]
+
+[node name="ChargerTaur" unique_id=679797982 instance=ExtResource("1_bfl0g")]
+script = ExtResource("2_nbebp")
+
+[node name="Skeleton3D" parent="RenderPlatform/MinotaurArm" parent_id_path=PackedInt32Array(1680013806) index="0" unique_id=999797779]
+bones/0/position = Vector3(-0.00013973474, 1.7728857, 0.051074058)
+bones/0/rotation = Quaternion(0.9585081, -0.043977063, 0.25874835, -0.111255184)
+bones/1/rotation = Quaternion(-0.1078405, 0.0023398995, -0.07615335, 0.9912445)
+bones/2/position = Vector3(-0.20543243, 0.43518835, -0.02125451)
+bones/2/rotation = Quaternion(-0.14612074, 0.7789765, -0.18327747, 0.58159584)
+bones/3/rotation = Quaternion(-0.8800733, 0.39863655, -0.18752474, 0.17718463)
+bones/4/rotation = Quaternion(-0.44402894, 0.5310853, 0.40219665, 0.59918654)
+bones/5/position = Vector3(0.20566718, 0.4351884, -0.021254512)
+bones/5/rotation = Quaternion(-0.17218432, -0.74453, 0.48504263, 0.4251604)
+bones/6/rotation = Quaternion(0.8429448, 0.5300467, -0.02803754, -0.08779819)
+bones/7/rotation = Quaternion(-0.5138324, -0.5642428, -0.35187554, 0.542024)
+bones/8/position = Vector3(-0.39080572, 0.029977106, 0.033360865)
+bones/8/rotation = Quaternion(0.19480488, -0.6941909, 0.6362821, 0.27439976)
+bones/9/rotation = Quaternion(0.37422517, -0.058195487, 0.16379136, 0.9109014)
+bones/10/rotation = Quaternion(0.052619223, 0.06443302, -0.03557801, 0.9958986)
+bones/11/rotation = Quaternion(-0.014216063, 0.10260716, 0.6461836, 0.75611943)
+bones/12/rotation = Quaternion(0.017729355, 0.019931603, 0.6400196, 0.76789546)
+bones/13/position = Vector3(-0.07384396, 0.103932396, 0.0028841777)
+bones/13/rotation = Quaternion(-0.29356635, 0.6492935, 0.6998518, 0.04943946)
+bones/14/rotation = Quaternion(-0.5471733, -0.38360968, 0.0539874, 0.7419774)
+bones/15/rotation = Quaternion(0.92049456, -0.06552936, 0.26255184, -0.28189042)
+bones/16/position = Vector3(0.39104068, 0.02997722, 0.033360843)
+bones/16/rotation = Quaternion(0.5006367, 0.5118592, -0.6929387, 0.08484745)
+bones/17/rotation = Quaternion(0.45060766, -0.22038502, -0.16878912, 0.8484653)
+bones/18/rotation = Quaternion(0.05853176, -0.06531581, -0.006189312, 0.9961273)
+bones/19/rotation = Quaternion(-0.009099692, -0.09247381, -0.59577525, 0.797758)
+bones/20/rotation = Quaternion(0.019891951, -0.020686904, -0.7142999, 0.69925106)
+bones/21/position = Vector3(0.07384404, 0.10393241, 0.0028842408)
+bones/21/rotation = Quaternion(-0.37477976, -0.4214286, -0.7511135, 0.34317148)
+bones/22/rotation = Quaternion(0.011417577, 0.33208156, -0.0033999938, 0.94317544)
+
+[node name="Hand_Right" parent="RenderPlatform/MinotaurArm/Skeleton3D" index="0" unique_id=398974261]
+transform = Transform3D(-0.62363815, -0.5557921, 0.54970026, 0.1807011, 0.58165675, 0.79310906, -0.7605411, 0.5939446, -0.26231122, -0.924498, 1.9130136, 0.21150954)
+
+[node name="Upperarm_Right" parent="RenderPlatform/MinotaurArm/Skeleton3D" index="1" unique_id=2050020787]
+transform = Transform3D(-0.3509596, -0.9301015, -0.108345985, 0.15308365, -0.17113969, 0.9732813, -0.92379284, 0.32499632, 0.20244633, -0.32103145, 1.8055696, -0.17409468)
+
+[node name="Head" parent="RenderPlatform/MinotaurArm/Skeleton3D" index="2" unique_id=1483663943]
+transform = Transform3D(0.96893305, -0.23403534, 0.079975724, 0.22492069, 0.69934624, -0.67847264, 0.10285598, 0.675383, 0.73025894, -0.013507311, 1.8245713, 0.08985955)
+
+[node name="Upperarm_Left" parent="RenderPlatform/MinotaurArm/Skeleton3D" index="3" unique_id=1619387021]
+transform = Transform3D(-0.8230349, 0.23979253, -0.51489145, -0.46363807, 0.24002758, 0.8528929, 0.32810533, 0.94068396, -0.0863742, 0.35310048, 1.694642, 0.20606983)

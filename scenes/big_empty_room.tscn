@@ -3,17 +3,12 @@
 [ext_resource type="PackedScene" uid="uid://ckogt2esus2i3" path="res://assets/dungeon-pieces/Floor_Standard.fbx" id="1_awve8"]
 [ext_resource type="PackedScene" uid="uid://d0dv77xuel6m4" path="res://assets/dungeon-pieces/Wall.fbx" id="2_7puls"]
 [ext_resource type="PackedScene" uid="uid://eynq1cbte0nq" path="res://assets/dungeon-pieces/Arch_Round_RoundColumn.fbx" id="3_7puls"]
-[ext_resource type="PackedScene" uid="uid://ba8k86y280xj5" path="res://assets/dungeon-pieces/Cart.fbx" id="4_2k8ow"]
-[ext_resource type="PackedScene" uid="uid://dgaexk2mqn6j8" path="res://player.tscn" id="5_4ja1t"]
-[ext_resource type="PackedScene" uid="uid://kkm7gdb0n8hg" path="res://scenes/rotational_camera.tscn" id="6_kd57g"]
+[ext_resource type="PackedScene" uid="uid://bne8e88gtjdms" path="res://scenes/charger_taur_modded.tscn" id="4_2k8ow"]
 
 [sub_resource type="Environment" id="Environment_4ja1t"]
 background_mode = 1
 ambient_light_color = Color(0.09803922, 0.9764706, 0.9764706, 1)
 ambient_light_energy = 1.33
-
-[sub_resource type="BoxShape3D" id="BoxShape3D_kd57g"]
-size = Vector3(8.788086, 1.9423828, 11.949219)
 
 [node name="BigEmptyRoom" type="Node3D" unique_id=834238426]
 
@@ -257,12 +252,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7, 0, -6)
 [node name="Arch_Round_RoundColumn" parent="." unique_id=535629214 instance=ExtResource("3_7puls")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 0, -6)
 
-[node name="Cart" parent="." unique_id=1831205724 instance=ExtResource("4_2k8ow")]
-transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -2, 0, 1)
-
-[node name="Player" parent="." unique_id=1103375191 instance=ExtResource("5_4ja1t")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 0, -5)
-
 [node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=1975013929]
 environment = SubResource("Environment_4ja1t")
 
@@ -274,23 +263,7 @@ shadow_enabled = true
 omni_range = 15.874
 omni_attenuation = -0.111
 
-[node name="Camera3D" type="Camera3D" parent="." unique_id=1854779046]
-transform = Transform3D(-0.5519357, -0.14056413, 0.82195425, 0, 0.98569053, 0.16856503, -0.8338867, 0.093037054, -0.54403776, 7.540491, 2.132119, -5.5738845)
+[node name="Camera3D" type="Camera3D" parent="." unique_id=215216755]
+transform = Transform3D(0.3007066, -0.181232, 0.9363389, 0, 0.98177886, 0.19002707, -0.95371675, -0.057142396, 0.29522735, 3.8391147, 2.4845595, 0.002613902)
 
-[node name="RotationalCamera" parent="." unique_id=330208 instance=ExtResource("6_kd57g")]
-transform = Transform3D(-0.55193555, -0.14056414, 0.82195425, 0, 0.98569053, 0.16856503, -0.83388674, 0.09303704, -0.54403764, 7.540491, 2.132119, -5.5738845)
-current = false
-
-[node name="DynamicTrigger" type="Area3D" parent="." unique_id=988379934]
-collision_mask = 2
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="DynamicTrigger" unique_id=654552741]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.894043, 1.0711914, 0)
-shape = SubResource("BoxShape3D_kd57g")
-debug_color = Color(1, 1, 0, 0.41960785)
-
-[node name="DynamicFixed1" type="Camera3D" parent="." unique_id=1865844322]
-transform = Transform3D(-0.5519355, -0.14056413, 0.82195425, 0, 0.98569053, 0.16856502, -0.8338867, 0.093037024, -0.54403764, 7.540491, 2.132119, -5.5738845)
-
-[node name="DynamicFixed2" type="Camera3D" parent="." unique_id=1965266718]
-transform = Transform3D(-0.7518393, -0.21416566, 0.62359506, 0, 0.9457776, 0.32481503, -0.65934646, 0.24420872, -0.7110727, 0.3054657, 2.5561268, -5.680733)
+[node name="ChargerTaur" parent="." unique_id=679797982 instance=ExtResource("4_2k8ow")]

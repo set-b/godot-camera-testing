@@ -6,6 +6,8 @@ const ROTATION_SPEED = 1.8
 @onready var camera_3d: Camera3D = %Camera3D
 const MAX_DISTANCE = 2.0
 @onready var playermodel: Node3D = $"../Player/playermodel"
+var inverted : bool = false
+@onready var camera_inversion_text: Label3D = $"../../CameraInversion"
 
 #const HEAD_HEIGHT := 1.0
 #const JUMP_LAG_RECOVERY := 5.0
@@ -26,8 +28,18 @@ func _process(delta: float) -> void:
 	rotate_input = Input.get_axis("camera_left", "camera_right")
 	if Input.is_action_just_pressed("snap_behind"):
 		snap_requested = true
+	
+	if Input.is_action_just_pressed("invert"):
+		inverted = !inverted
 		
 func _physics_process(delta: float) -> void:
+	if inverted:
+		camera_inversion_text.text = "Camera controls are inverted"
+		camera_inversion_text.modulate = Color.GREEN
+	else:
+		camera_inversion_text.text = "Camera controls are not inverted"
+		camera_inversion_text.modulate = Color.RED
+	
 	var shape := shape_cast_3d.shape
 	# interpolation for jumping
 	var current_y := playermodel.global_position.y
@@ -96,5 +108,9 @@ func _physics_process(delta: float) -> void:
 		
 		reset_physics_interpolation()
 		snap_requested = false
-		
+	
+	if inverted:
+		rotate_input = rotate_input * -1.0
+	
 	rotate_y(rotate_input * ROTATION_SPEED * delta)
+	
