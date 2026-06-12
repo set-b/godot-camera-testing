@@ -1,23 +1,67 @@
-extends Node3D
-
+class_name Minotaur extends CharacterBody3D
+@onready var playermodel: Node3D = $"../Playermodel/Player"
 @onready var animation_player: AnimationPlayer = $AnimationPlayer
 var play : bool = true
+var turn_speed = 4.0
 var finished : bool = false
+@onready var charge_timer: Timer = $"ChargerTaur/Timer"
+var charging : bool = false
+var charging_speed : float = 10.0
+var returning : bool = false
+@onready var collision_shape_3d: CollisionShape3D = $CollisionShape3D
+@onready var area_3d: Area3D = $Area3D
+@onready var original_position : Vector3 = self.global_position
+@export var return_speed : float = 8.0
+var dying = false
+var damage = 0
+var victory_script = preload("res://scenes/victory.gd")
+
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	print("minotaur ready")
-	animation_player.play("Action")
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
-	pass
+	charge_timer.start()
+	charge_timer.timeout.connect(charge)
 	
-	# play is true upon startup
-	# play is false after the animation is finished
-	# finished is true at the beginning of this executed code block
-	#if play and not finished:
-		#finished = true
-		#animation_player.play("Action")
-		#animation_player.animation_finished.connect(func() -> void:
-			#play = false
-		#)
+	area_3d.body_entered.connect(return_to_position)
+	
+
+func _physics_process(delta: float) -> void:
+	if playermodel == null:
+		return
+	if damage >= 3:
+		velocity = Vector3.ZERO
+		var victory_message = Label3D.new()
+		victory_message.text = "You Win!"
+		victory_message.font_size = 90
+		victory_message.global_position = original_position + Vector3(0, 1,0)
+		victory_message.set_script(victory_script)
+		get_tree().current_scene.add_child(victory_message)
+		self.queue_free()
+	if returning:
+		# move toward original spot; physics owns the body, no external tween
+		global_position = global_position.move_toward(original_position, return_speed * delta)
+		velocity = Vector3.ZERO
+		if global_position.distance_to(original_position) < 0.1:
+			returning = false
+			charge_timer.start()
+	elif charging:
+		velocity = -basis.z * charging_speed
+		move_and_slide()
+	else:  # idle / aiming
+		var target := playermodel.global_position
+		target.y = global_position.y
+		look_at(target, Vector3.UP)
+		velocity = Vector3.ZERO
+	
+func charge() -> void:
+	charging = true
+	# minotaur runs forward direction until it collides with either wall or pot
+
+func return_to_position(body: Node) -> void:
+	if returning:
+		return
+	returning = true
+	charging = false
+	
+func hurt() -> void:
+	damage += 1
+	return_to_position(self)

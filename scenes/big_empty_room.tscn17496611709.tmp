@@ -3,9 +3,9 @@
 [ext_resource type="PackedScene" uid="uid://ckogt2esus2i3" path="res://assets/dungeon-pieces/Floor_Standard.fbx" id="1_awve8"]
 [ext_resource type="PackedScene" uid="uid://d0dv77xuel6m4" path="res://assets/dungeon-pieces/Wall.fbx" id="2_7puls"]
 [ext_resource type="PackedScene" uid="uid://eynq1cbte0nq" path="res://assets/dungeon-pieces/Arch_Round_RoundColumn.fbx" id="3_7puls"]
+[ext_resource type="PackedScene" uid="uid://bne8e88gtjdms" path="res://scenes/charger_taur_modded.tscn" id="4_2k8ow"]
 [ext_resource type="PackedScene" uid="uid://wbb55ygdrf4d" path="res://scenes/torch._boss_switch.tscn" id="5_4ja1t"]
 [ext_resource type="Script" uid="uid://2t46v0wk0ii3" path="res://torch_boss_switch.gd" id="6_kd57g"]
-[ext_resource type="PackedScene" uid="uid://bkqvsgrsekayi" path="res://scenes/minotaur_boss.tscn" id="7_egla6"]
 [ext_resource type="PackedScene" uid="uid://clc5wyxydsaka" path="res://player_lag.tscn" id="7_qmida"]
 
 [sub_resource type="Environment" id="Environment_4ja1t"]
@@ -393,6 +393,9 @@ omni_attenuation = -0.111
 [node name="Camera3D" type="Camera3D" parent="." unique_id=215216755]
 transform = Transform3D(0.03490325, -0.8779018, 0.47756708, 0, 0.47785822, 0.87843704, -0.9993907, -0.030660307, 0.016678808, 6.6294765, 18.571032, 2.9824202)
 
+[node name="ChargerTaur" parent="." unique_id=679797982 instance=ExtResource("4_2k8ow")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 0, 3)
+
 [node name="BlueSwitchLight" type="SpotLight3D" parent="." unique_id=1680576462]
 transform = Transform3D(1, 0, 0, 0, 0.026822561, 0.9996402, 0, -0.9996402, 0.026822561, 1.0619966, 5.281458, 3.0880167)
 light_color = Color(0, 0, 1, 1)
@@ -447,6 +450,3 @@ tile = NodePath("../Floor/BlueTile")
 
 [node name="Playermodel" parent="." unique_id=2030695621 instance=ExtResource("7_qmida")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 0, 8)
-
-[node name="MinotaurBoss" parent="." unique_id=825047283 instance=ExtResource("7_egla6")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 0, 3)

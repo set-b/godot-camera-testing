@@ -1,12 +1,11 @@
 [gd_scene format=3 uid="uid://bne8e88gtjdms"]
 
 [ext_resource type="PackedScene" uid="uid://ckbcuewasoodh" path="res://assets/Boss/ChargerTaur.glb" id="1_bfl0g"]
-[ext_resource type="Script" uid="uid://cm0c5hql5u3e0" path="res://charger_taur.gd" id="2_nbebp"]
 
 [node name="ChargerTaur" unique_id=679797982 instance=ExtResource("1_bfl0g")]
-script = ExtResource("2_nbebp")
 
 [node name="Skeleton3D" parent="RenderPlatform/MinotaurArm" parent_id_path=PackedInt32Array(1680013806) index="0" unique_id=999797779]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0, 0, 0)
 bones/0/position = Vector3(-0.00013973474, 1.7728857, 0.051074058)
 bones/0/rotation = Quaternion(0.9585081, -0.043977063, 0.25874835, -0.111255184)
 bones/1/rotation = Quaternion(-0.1078405, 0.0023398995, -0.07615335, 0.9912445)
@@ -49,3 +48,7 @@ transform = Transform3D(0.96893305, -0.23403534, 0.079975724, 0.22492069, 0.6993
 
 [node name="Upperarm_Left" parent="RenderPlatform/MinotaurArm/Skeleton3D" index="3" unique_id=1619387021]
 transform = Transform3D(-0.8230349, 0.23979253, -0.51489145, -0.46363807, 0.24002758, 0.8528929, 0.32810533, 0.94068396, -0.0863742, 0.35310048, 1.694642, 0.20606983)
+
+[node name="Timer" type="Timer" parent="." index="2" unique_id=407819948]
+wait_time = 5.0
+one_shot = true

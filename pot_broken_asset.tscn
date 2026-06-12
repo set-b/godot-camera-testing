@@ -1,0 +1,11 @@
+[gd_scene format=3 uid="uid://4rv4ikhn4m5i"]
+
+[ext_resource type="PackedScene" uid="uid://dqscfm7qcrddg" path="res://assets/dungeon-pieces/Pot1_Broken.fbx" id="1_h0b7h"]
+[ext_resource type="Script" uid="uid://jel5671jt1ix" path="res://pot_broken_asset.gd" id="2_igqjk"]
+[ext_resource type="AudioStream" uid="uid://bgalhsyqdnc0y" path="res://assets/dragon-studio-glass-breaking-504033.mp3" id="3_igqjk"]
+
+[node name="Pot1_Broken" unique_id=1093583284 instance=ExtResource("1_h0b7h")]
+script = ExtResource("2_igqjk")
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="." index="1" unique_id=1576937912]
+stream = ExtResource("3_igqjk")

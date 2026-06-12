@@ -1,0 +1,27 @@
+[gd_scene format=3 uid="uid://bkqvsgrsekayi"]
+
+[ext_resource type="PackedScene" uid="uid://bne8e88gtjdms" path="res://scenes/charger_taur_modded.tscn" id="1_5lmsh"]
+[ext_resource type="Script" uid="uid://cm0c5hql5u3e0" path="res://charger_taur.gd" id="1_16055"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_16055"]
+radius = 0.8208008
+height = 3.0302734
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_16055"]
+
+[node name="MinotaurBoss" type="CharacterBody3D" unique_id=825047283]
+collision_layer = 2
+script = ExtResource("1_16055")
+
+[node name="ChargerTaur" parent="." unique_id=679797982 instance=ExtResource("1_5lmsh")]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1990279073]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.2139838, 0)
+shape = SubResource("CapsuleShape3D_16055")
+
+[node name="Area3D" type="Area3D" parent="." unique_id=550881129]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D" unique_id=87487568]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, -1)
+shape = SubResource("SphereShape3D_16055")
+debug_color = Color(0.9670072, 8.663535e-07, 0.4799723, 0.41960785)

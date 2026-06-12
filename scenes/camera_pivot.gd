@@ -33,12 +33,13 @@ func _process(delta: float) -> void:
 		inverted = !inverted
 		
 func _physics_process(delta: float) -> void:
-	if inverted:
-		camera_inversion_text.text = "Camera controls are inverted"
-		camera_inversion_text.modulate = Color.GREEN
-	else:
-		camera_inversion_text.text = "Camera controls are not inverted"
-		camera_inversion_text.modulate = Color.RED
+	# temporarily disabled since not in main scene
+	#if inverted:
+		#camera_inversion_text.text = "Camera controls are inverted"
+		#camera_inversion_text.modulate = Color.GREEN
+	#else:
+		#camera_inversion_text.text = "Camera controls are not inverted"
+		#camera_inversion_text.modulate = Color.RED
 	
 	var shape := shape_cast_3d.shape
 	# interpolation for jumping
@@ -96,6 +97,7 @@ func _physics_process(delta: float) -> void:
 	current_distance = lerp(current_distance, target_distance, 10.0 * delta)
 	camera_3d.position = Vector3(0,0,current_distance)
 	
+	# replace tween with a lerp
 	if snap_requested == true:
 		# this works
 		#self.rotation = Vector3(self.rotation.x, target_yaw, self.rotation.z)

@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://cbsinqy2u2nbm"]
+
+[ext_resource type="PackedScene" uid="uid://b0wydywu7fniq" path="res://assets/dungeon-pieces/Pot1.fbx" id="1_oxva8"]
+[ext_resource type="Script" uid="uid://cyajibyokqtve" path="res://pot_asset.gd" id="2_pq1hj"]
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_pq1hj"]
+radius = 0.7
+
+[node name="Pot1" unique_id=351232255 groups=["pot"] instance=ExtResource("1_oxva8")]
+script = ExtResource("2_pq1hj")
+
+[node name="Area3D" type="Area3D" parent="." index="1" unique_id=252336393]
+collision_mask = 2
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D" index="0" unique_id=1306456873]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.6, 0)
+shape = SubResource("SphereShape3D_pq1hj")
