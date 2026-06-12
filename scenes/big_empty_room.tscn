@@ -13,6 +13,9 @@ background_mode = 1
 ambient_light_color = Color(0.09803922, 0.9764706, 0.9764706, 1)
 ambient_light_energy = 1.33
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_qmida"]
+size = Vector3(3, 3, 1)
+
 [node name="BigEmptyRoom" type="Node3D" unique_id=834238426]
 
 [node name="Floor" type="Node3D" parent="." unique_id=396231422]
@@ -450,3 +453,9 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 0, 8)
 
 [node name="MinotaurBoss" parent="." unique_id=825047283 instance=ExtResource("7_egla6")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 0, 3)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="." unique_id=72681963]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" unique_id=1880716109]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 1.8, -7)
+shape = SubResource("BoxShape3D_qmida")
