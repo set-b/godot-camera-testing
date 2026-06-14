@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://ckogt2esus2i3"
-path="res://.godot/imported/Floor_Standard.fbx-58b696185461b1d2e09d3674436c3560.scn"
+uid="uid://mywm164pnfyp"
+path="res://.godot/imported/Doors_RoundArch.fbx-3aa7d12aee15d57d54b2e2172b703cf3.scn"
 
 [deps]
 
-source_file="res://assets/dungeon-pieces/Floor_Standard.fbx"
-dest_files=["res://.godot/imported/Floor_Standard.fbx-58b696185461b1d2e09d3674436c3560.scn"]
+source_file="res://assets/dungeon-pieces/Doors_RoundArch.fbx"
+dest_files=["res://.godot/imported/Doors_RoundArch.fbx-3aa7d12aee15d57d54b2e2172b703cf3.scn"]
 
 [params]
 
@@ -39,9 +39,13 @@ materials/extract_format=0
 materials/extract_path=""
 _subresources={
 "nodes": {
-"PATH:Floor_Standard": {
+"PATH:Doors_RoundArch_L": {
 "generate/physics": true,
-"physics/shape_type": 1
+"physics/shape_type": 2
+},
+"PATH:Doors_RoundArch_R": {
+"generate/physics": true,
+"physics/shape_type": 2
 }
 }
 }

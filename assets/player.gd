@@ -19,6 +19,9 @@ enum animation_state {IDLE,RUNNING,JUMPING}
 var player_animation_state : animation_state = animation_state.IDLE
 @onready var animation_player : AnimationPlayer = $"playermodel/character-male-e2/AnimationPlayer"
 
+func _ready() -> void:
+	add_to_group("player")
+
 func _physics_process(delta: float) -> void:
 	# Asymmetric gravity.
 	# gravity is heavier when the velocity.y is decreasing. slower rise, faster descent

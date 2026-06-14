@@ -23,8 +23,5 @@ func _process(delta: float) -> void:
 		if Input.is_action_just_pressed("ui_accept"):
 			animation_player.play("open")
 			collision_shape_3d.set_deferred_thread_group("disabled", true)
-			win_message.visible = true
+			#win_message.visible = true
 			used = true
-			get_tree().create_timer(3.0).timeout.connect(func() -> void:
-				get_tree().reload_current_scene()
-			)

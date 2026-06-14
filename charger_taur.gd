@@ -1,5 +1,5 @@
 class_name Minotaur extends CharacterBody3D
-@onready var playermodel: Node3D = $"../Playermodel/Player"
+@onready var playermodel : Node3D
 @onready var animation_player: AnimationPlayer = $ChargerTaur/AnimationPlayer
 var play : bool = true
 var turn_speed = 4.0
@@ -16,17 +16,25 @@ var dying = false
 var damage = 0
 var victory_script = preload("res://scenes/victory.gd")
 var is_hurt = false
+var not_here = true
+@onready var detect_player_here: Area3D = $"../Here"
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	charge_timer.start()
 	charge_timer.timeout.connect(charge)
 	
 	area_3d.body_entered.connect(return_to_position)
 	animation_player.speed_scale = 0.25
+	detect_player_here.body_entered.connect(func(body: Node3D) -> void:
+		if body is Player:
+			print("here!")
+			not_here = false
+			playermodel = body
+			charge_timer.start()
+	)
 
 func _physics_process(delta: float) -> void:
-	if playermodel == null or is_hurt == true:
+	if playermodel == null or is_hurt == true or not_here:
 		return
 	if damage >= 3:
 		# not playing hurt animation
@@ -54,7 +62,7 @@ func _physics_process(delta: float) -> void:
 		if animation_player.current_animation != "Charging":
 			animation_player.speed_scale = 1.0
 			animation_player.play("Charging")
-		velocity = -basis.z * charging_speed
+		velocity = -global_basis.z * charging_speed
 		move_and_slide()
 	else:  # idle / aiming
 		if animation_player.current_animation != "Idle":

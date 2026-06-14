@@ -9,8 +9,11 @@
 [ext_resource type="PackedScene" uid="uid://b6urj3cqyvncu" path="res://assets/dungeon-pieces/Torch.fbx" id="9_q3d3p"]
 [ext_resource type="PackedScene" uid="uid://dlh32r4obha6q" path="res://scenes/platform_room.tscn" id="9_wyy3a"]
 [ext_resource type="PackedScene" uid="uid://dj6xmyqsieseh" path="res://scenes/torch._switch.tscn" id="10_7bqx5"]
+[ext_resource type="PackedScene" uid="uid://ceg3j656fd80j" path="res://scenes/big_empty_room.tscn" id="10_aotgj"]
 [ext_resource type="PackedScene" uid="uid://cakrsvublrm00" path="res://chest_gold.tscn" id="10_q3d3p"]
 [ext_resource type="PackedScene" uid="uid://ckj04kgrjckf4" path="res://scenes/instructions.tscn" id="11_7bqx5"]
+[ext_resource type="PackedScene" uid="uid://bfyleuffhii08" path="res://doors_round_arch_openable.tscn" id="11_idaw7"]
+[ext_resource type="Script" uid="uid://c6lk8c4lr6unq" path="res://doors_round_arch_openable.gd" id="12_6m1la"]
 
 [sub_resource type="Environment" id="Environment_igipr"]
 background_mode = 1
@@ -19,6 +22,12 @@ ambient_light_energy = 1.33
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_h01uo"]
 size = Vector3(1, 2.5, 3)
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_6m1la"]
+radius = 1.3000001
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_gopiv"]
+radius = 2.4
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_q3d3p"]
 size = Vector3(8.6, 3, 1)
@@ -448,6 +457,27 @@ shape = SubResource("BoxShape3D_h01uo")
 
 [node name="PlatformRoom" parent="StaticBody3D3" unique_id=2048777723 instance=ExtResource("9_wyy3a")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 21, 0, -1.2)
+
+[node name="BigEmptyRoom" parent="StaticBody3D3" unique_id=834238426 instance=ExtResource("10_aotgj")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 38, 2.7, 3.6)
+
+[node name="Doors_RoundArch2" parent="StaticBody3D3" unique_id=1363657087 instance=ExtResource("11_idaw7")]
+transform = Transform3D(-4.3545054e-08, 0.08715574, 0.9961947, 3.8096983e-09, 0.9961947, -0.08715574, -1, 0, -4.371139e-08, 31.8236, 2.7388313, -1.4417791)
+script = ExtResource("12_6m1la")
+
+[node name="Area3D" type="Area3D" parent="StaticBody3D3/Doors_RoundArch2" unique_id=2010098749]
+collision_mask = 2
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D3/Doors_RoundArch2/Area3D" unique_id=1765323003]
+transform = Transform3D(1, 2.6645353e-15, 0, 0, 1, -1.9411756e-23, 0, 9.705878e-23, 1, 2.3841858e-07, 0.9961934, -0.087156296)
+shape = SubResource("SphereShape3D_6m1la")
+
+[node name="ExitArea" type="Area3D" parent="StaticBody3D3/Doors_RoundArch2" unique_id=880183368]
+collision_mask = 2
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D3/Doors_RoundArch2/ExitArea" unique_id=256228128]
+transform = Transform3D(1, 1.7763568e-15, 0, 0, 1, -1.9411756e-23, 0, 5.8235265e-23, 1, 2.3841858e-07, 1.2576604, 2.9014282)
+shape = SubResource("SphereShape3D_gopiv")
 
 [node name="Chest_Gold" parent="." unique_id=425445186 instance=ExtResource("10_q3d3p")]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 29, 2.7337062, -1.1045961)

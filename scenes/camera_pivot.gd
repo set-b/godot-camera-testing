@@ -34,12 +34,12 @@ func _process(delta: float) -> void:
 		
 func _physics_process(delta: float) -> void:
 	# temporarily disabled since not in main scene
-	#if inverted:
-		#camera_inversion_text.text = "Camera controls are inverted"
-		#camera_inversion_text.modulate = Color.GREEN
-	#else:
-		#camera_inversion_text.text = "Camera controls are not inverted"
-		#camera_inversion_text.modulate = Color.RED
+	if inverted:
+		camera_inversion_text.text = "Camera controls are inverted"
+		camera_inversion_text.modulate = Color.GREEN
+	else:
+		camera_inversion_text.text = "Camera controls are not inverted"
+		camera_inversion_text.modulate = Color.RED
 	
 	var shape := shape_cast_3d.shape
 	# interpolation for jumping
@@ -92,6 +92,7 @@ func _physics_process(delta: float) -> void:
 	# then if direction.z > 0.0 (since negative z is facing forward)
 	# either shrink sphereshape3d radius, change the shape, disable shapecast3d 
 	# collide with bodies property and/or gentle auto focus through tween
+	
 	self.global_position = lerp(self.global_position, playermodel.global_position + vertical_offset, 0.30)
 		
 	current_distance = lerp(current_distance, target_distance, 10.0 * delta)

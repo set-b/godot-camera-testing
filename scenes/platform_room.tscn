@@ -162,15 +162,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10, 2.8, 3.2)
 [node name="NorthWallPlatform" type="Node3D" parent="." unique_id=1802352856]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 8, 0, 14)
 
-[node name="Wall7" parent="NorthWallPlatform" unique_id=542915173 instance=ExtResource("4_6m6ee")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12, 2.7, 3.2000003)
-
-[node name="Wall8" parent="NorthWallPlatform" unique_id=1578204390 instance=ExtResource("4_6m6ee")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13.999998, 2.7, 3.1999993)
-
-[node name="Wall9" parent="NorthWallPlatform" unique_id=1557294035 instance=ExtResource("4_6m6ee")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16, 2.7, 3.1999993)
-
 [node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=300731984]
 environment = SubResource("Environment_4adt7")
 
