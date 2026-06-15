@@ -102,15 +102,12 @@ func _physics_process(delta: float) -> void:
 	if snap_requested == true:
 		# this works
 		#self.rotation = Vector3(self.rotation.x, target_yaw, self.rotation.z)
-		# tween attempt
-		snap_tween = create_tween()
-		snap_tween.set_process_mode(Tween.TWEEN_PROCESS_PHYSICS)
-		# replace magic number with snap behind speed
-		snap_tween.tween_property(self, "rotation:y", target_yaw, 0.8)
-		# end of tween attempt
 		
-		reset_physics_interpolation()
-		snap_requested = false
+		self.rotation.y = lerp(self.rotation.y, target_yaw, 0.10)
+		
+		if abs(self.rotation.y - target_yaw) < 0.1:
+			reset_physics_interpolation()
+			snap_requested = false
 	
 	if inverted:
 		rotate_input = rotate_input * -1.0
