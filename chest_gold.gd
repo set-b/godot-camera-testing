@@ -6,6 +6,7 @@ extends Node3D
 var openable : bool = false
 var used : bool = false
 @onready var win_message: Label3D = $WinMessage
+@onready var key_scene : Node3D = preload("res://goldkey_modded.tscn").instantiate()
 
 func _ready() -> void:
 	area_3d.body_entered.connect(func(body: Node) -> void:
@@ -18,10 +19,12 @@ func _ready() -> void:
 				openable = false
 	)
 	
-func _process(delta: float) -> void:
+func _physics_process(delta: float) -> void:
 	if openable and not used:
 		if Input.is_action_just_pressed("ui_accept"):
 			animation_player.play("open")
 			collision_shape_3d.set_deferred_thread_group("disabled", true)
+			key_scene.global_position = self.global_position + Vector3(0,1,0)
+			get_tree().current_scene.add_child(key_scene)
 			#win_message.visible = true
 			used = true

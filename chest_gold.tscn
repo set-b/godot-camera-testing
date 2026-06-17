@@ -4,7 +4,7 @@
 [ext_resource type="Script" uid="uid://cd2543jvvvmpu" path="res://chest_gold.gd" id="2_qty6p"]
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_qty6p"]
-radius = 1.1
+radius = 1.0
 
 [sub_resource type="Animation" id="Animation_qty6p"]
 length = 0.001
@@ -67,7 +67,7 @@ _data = {
 }
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_qty6p"]
-size = Vector3(1.1, 1, 1)
+size = Vector3(1.1, 0.6, 1)
 
 [node name="Chest_Gold" unique_id=425445186 instance=ExtResource("1_1qtgt")]
 script = ExtResource("2_qty6p")
@@ -88,7 +88,7 @@ libraries/ = SubResource("AnimationLibrary_lgihh")
 [node name="StaticBody3D" type="StaticBody3D" parent="." index="4" unique_id=427637889]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" index="0" unique_id=1491608195]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.3, 0)
 shape = SubResource("BoxShape3D_qty6p")
 
 [node name="WinMessage" type="Label3D" parent="." index="5" unique_id=778439468]

@@ -3,6 +3,7 @@ extends Node3D
 @onready var area_3d: Area3D = $Area3D
 var pot_scene = null
 @export var tile : Node3D
+@export var pot_camera : Camera3D
 @onready var pot = preload("res://pot_asset.tscn")
 @onready var pot_broken = preload("res://assets/dungeon-pieces/Pot1_Broken.fbx")
 
@@ -13,9 +14,6 @@ var rotation_animation_time : float = 0.4
 signal pressed
 @onready var audio_stream_player_3d: AudioStreamPlayer3D = $AudioStreamPlayer3D
 var used : bool = false
-
-# TODO spawn pot, check if pot is null for switch to do anything
-# allow player to activate multiple times
 
 func _ready() -> void:
 	area_3d.body_entered.connect(func(body: Node) -> void:
@@ -29,7 +27,7 @@ func _ready() -> void:
 		if body is Player:
 			interactive = false
 			player_is_here = false
-	) 
+	)
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
@@ -39,24 +37,33 @@ func _process(delta: float) -> void:
 			var initial_rotation := rotation.z
 			# will replace "used" with pot in place
 			#used = true
-			var rotation_tween : Tween = create_tween()
+			var rotation_tween = create_tween()
 			rotation_tween.set_ease(Tween.EASE_OUT)
 			rotation_tween.tween_property(self, "rotation:z", 0.0, rotation_animation_time)
-			
-			# trying to spawn the pot
-			if pot_scene == null:
-				pot_scene = pot.instantiate()
-				
-				pot_scene.global_position = tile.global_position
-				# need to add pot behavior by adding area3d, collision shape, and script
-				
-				get_tree().current_scene.add_child(pot_scene)
-					
-			# end of attempt to spawn the pot
 			
 			rotation_tween.tween_property(self, "rotation:z", initial_rotation, rotation_animation_time)
 			audio_stream_player_3d.play(0.0)
 			rotation_tween.finished.connect(func() -> void:
+				await pot_check()
 				pressed.emit()
 				interactive = true
+				
+				# just needed to add a timer because changing the camera was too fast!
+				await get_tree().create_timer(1.0).timeout
+
+				if get_viewport().get_camera_3d() == pot_camera:
+					get_viewport().get_camera_3d().clear_current()
+				get_tree().paused = false
 			)
+			
+
+func pot_check() -> void:
+	if pot_scene == null:
+		get_tree().paused = true
+		pot_camera.make_current()
+		pot_scene = pot.instantiate()
+				
+		pot_scene.global_position = tile.global_position
+				# need to add pot behavior by adding area3d, collision shape, and script
+				
+		get_tree().current_scene.add_child(pot_scene)

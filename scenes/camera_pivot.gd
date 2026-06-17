@@ -65,6 +65,7 @@ func _physics_process(delta: float) -> void:
 	#self.position.y = HEAD_HEIGHT - jump_lag
 	# end of interpolation for jumping
 	
+	# this is really the backward_vector
 	var forward_vector := playermodel.basis.z
 	var target_yaw := atan2(forward_vector.x, forward_vector.z)
 	var target_distance := MAX_DISTANCE
